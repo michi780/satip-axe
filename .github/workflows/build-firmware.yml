@@ -16,7 +16,7 @@ jobs:
     - name: Build the firmware
       run: |
         docker build . --pull --file Dockerfile --tag satip-axe-make
-        docker run --rm -v $(pwd):/build satip-axe-make all release
+        docker run --rm -v $(pwd):/build michi780/satip-axe-make all release
     
     - name: Archive build artifacts
       uses: actions/upload-artifact@v3
